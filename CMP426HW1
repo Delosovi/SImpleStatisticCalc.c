@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+void summation(int arr[], int num)
+{
+    int sum = 0;
+    int i;
+
+    for (int i = 0; i < num; i++)
+    {
+        sum += arr[i];
+    }
+    printf("The sum is: %d\n", sum);
+}
+
+void average(int arr[], int num)
+{
+    int i;
+    int sum = 0;
+
+    for (int i = 0; i < num; i++)
+    {
+        sum += arr[i];
+    }
+    double average = sum / num;
+    printf("The average is: %f\n", average);
+}
+
+void Max(int arr[], int num)
+{
+    int max = arr[0];
+    int i;
+
+    for (i = 1; i < num; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+    }
+    printf("The max is: %d\n", max);
+}
+void Min(int arr[], int num)
+{
+
+    int min = arr[0];
+    int i;
+
+    for (i = 1; i < num; i++)
+    {
+        if (arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
+    printf("The min is: %d\n", min);
+}
+int main()
+{
+
+    int Num;
+    int i;
+    printf("Please enter, how many numbers do you want in your array? \n");
+    scanf("%d", &Num);
+
+    int arr[Num];
+    printf("Enter %d numbers: \n", Num);
+    for (i = 0; i < Num; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    summation(arr, Num);
+    average(arr, Num);
+    Max(arr, Num);
+    Min(arr, Num);
+    return 0;
+}
